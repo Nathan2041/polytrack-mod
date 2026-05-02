@@ -12991,7 +12991,7 @@
                 throw new Error("CarState data is too short");
             return !!(2 & t[11])
         }
-        importScripts("lib/polytrack_physics.js");
+        importScripts("https://cwctrack.cwcinc.dev/lib/polytrack_physics.js");
         const jo = [];
         onmessage = t => {
             jo.push(t)
