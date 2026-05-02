@@ -1,0 +1,154 @@
+.track-preview-container {
+    margin: 0;
+    padding: 6px 7px;
+    font-size: 30px;
+    color: var(--text-color);
+    background-color: var(--button-color);
+    border-color: var(--surface-secondary-color);
+    border-width: 10px;
+    border-radius: 0px 0px 0px 30px;
+    border-style: double;
+    position: fixed;
+    right: 0px;
+    top: 0;
+    transition: top 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.editor-ui .track-preview-container {
+    display: inline-block;
+    border-width: 0px 10px 10px;
+    position: absolute;
+    top: unset;
+    right: unset;
+    border-radius: 0px 0px 30px 0px;
+    left: 0px;
+}
+
+.editor-ui .track-preview-container.closed {
+    left: -100%;
+    top: unset;
+}
+
+.track-preview-container.closed {
+    top: -100%;
+}
+
+.track-preview-container canvas {
+    margin: 0;
+    padding: 5px 5px;
+    width: 228px;
+    height: 228px;
+    object-fit: contain;
+    -webkit-filter: drop-shadow(0 0 3px #000);
+    filter: drop-shadow(0 0 3px #000);
+    image-rendering: pixelated;
+}
+
+.date-created {
+    position: absolute;
+    font-size: medium;
+    width: 100%;
+    bottom: 35px;
+    opacity: 20%;
+}
+
+.load-backup-button {
+    position: absolute;
+    top: 7px;
+    left: 11px;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    border-radius: 2px;
+    border: none;
+    background-color: var(--button-color);
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.load-backup-button > img {
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    vertical-align: top;
+    pointer-events: none;
+}
+
+.leaderboard-ui > .container > button.main > div > p.run-id-text {
+    position: absolute;
+    font-size: medium;
+    top: 0px;
+    right: 0px;
+    opacity: 20%;
+    user-select: all;
+}
+
+.leaderboard-ui > .total-players {
+    user-select: all;
+}
+
+.mic-button.mic-muted .button-icon {
+    opacity: 0.5;
+}
+
+.mic-button.mic-muted::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 50%;
+    width: 3px;
+    background: red;
+    transform: translateX(-50%) rotate(45deg);
+    border-radius: 2px;
+    height: unset;
+    z-index: 1;
+    transition: unset;
+    border-bottom: unset;
+}
+
+.mic-button.mic-muted {
+    position: relative;
+}
+
+.menu-ui {
+    background-color: rgba(20, 20, 45, 0.2) !important;
+    backdrop-filter: unset !important;
+    -webkit-backdrop-filter: unset !important;
+}
+
+.menu-ui > .warning-message.modded {
+    margin-bottom: -52px !important;
+    margin-top: 0px !important;
+    color: #b561c4 !important;
+}
+
+.menu-ui > .warning-message.modded.hiding {
+    animation: fade-out 2s ease-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 100%;
+    }
+}
+
+.track-export-ui > .box > .bar > p.export-kb-display {
+    position: relative;
+    color: var(--text-color);
+    float: right;
+
+    margin: 0;
+    padding: 8px 18px;
+    background-color: var(--button-color);
+    border: none;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+    color: var(--text-color);
+    font-size: 32px;
+    pointer-events: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
