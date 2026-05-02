@@ -26,14 +26,14 @@
     // Higher = longer key hold/release windows = game steering has time to
     // build and decay between pulses = more noticeable difference between
     // duty cycles. Try 20-80ms.
-    modulationMs  : 40,
+    modulationMs  : 1,
 
     // Power curve applied to stick input before sigma-delta.
     // 1.0 = linear. Higher = more stick travel needed for high duty cycles.
-    steerCurve    : 3.0,
+    steerCurve    : 1.0,
 
     // Minimum duty cycle for any non-zero stick input (0..1).
-    minSteerDuty  : 0.05,
+    minSteerDuty  : 0,
 
     keys: {
       left       : { key: 'ArrowLeft',  code: 'ArrowLeft'  },
